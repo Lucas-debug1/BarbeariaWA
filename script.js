@@ -98,6 +98,7 @@
     persist();
   }
 
+
   function services() {
     return [].map.call(document.querySelectorAll("[data-service]"), function (el) {
       return {
@@ -169,6 +170,7 @@
     return /\?/.test(raw) || /^(quanto|qual|quais|onde|como|quando|tem |voces|vcs|posso|pode)/.test(t) || answerLocal(raw) !== null;
   }
 
+
   function cap(w, i) {
     var low = w.toLowerCase();
     if (i > 0 && /^(da|de|do|das|dos|e)$/.test(low)) return low;
@@ -195,6 +197,7 @@
       ? "(" + d.slice(0, 2) + ") " + d.slice(2, 7) + "-" + d.slice(7)
       : "(" + d.slice(0, 2) + ") " + d.slice(2, 6) + "-" + d.slice(6);
   }
+
 
   var sample = null;
   try {

@@ -53,7 +53,7 @@
   }
   .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
   .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; letter-spacing: -.01em; text-decoration: none; }
-  .brand i { width: 9px; height: 9px; border-radius: 50%; background: var(--red); display: block; flex: none; }
+  .brand-logo { width: 32px; height: 32px; border-radius: 8px; display: block; flex: none; }
   .nav { display: flex; align-items: center; gap: 28px; }
   .nav a.l { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; }
   .nav a.l:hover { color: var(--fg); }
