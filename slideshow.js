@@ -1,3 +1,4 @@
+
 (function () {
   var imgs = document.querySelectorAll(".bg img");
   if (imgs.length < 2) return;

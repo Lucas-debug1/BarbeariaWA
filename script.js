@@ -98,7 +98,6 @@
     persist();
   }
 
-
   function services() {
     return [].map.call(document.querySelectorAll("[data-service]"), function (el) {
       return {
@@ -170,7 +169,6 @@
     return /\?/.test(raw) || /^(quanto|qual|quais|onde|como|quando|tem |voces|vcs|posso|pode)/.test(t) || answerLocal(raw) !== null;
   }
 
-
   function cap(w, i) {
     var low = w.toLowerCase();
     if (i > 0 && /^(da|de|do|das|dos|e)$/.test(low)) return low;
@@ -197,8 +195,6 @@
       ? "(" + d.slice(0, 2) + ") " + d.slice(2, 7) + "-" + d.slice(7)
       : "(" + d.slice(0, 2) + ") " + d.slice(2, 6) + "-" + d.slice(6);
   }
-
-
   var sample = null;
   try {
     if (window.claude && typeof window.claude.use === "function") {
@@ -309,7 +305,6 @@
       ? "Assistente virtual automático. Seus dados ficam salvos só neste aparelho."
       : "Assistente virtual automático. Este navegador não permite salvar seus dados.";
   }
-
   async function handleNome(text) {
     var t = norm(text);
     if (/^(oi|ola|opa|e ai|eai|bom dia|boa tarde|boa noite|salve|fala)[!. ]*$/.test(t)) {
@@ -431,7 +426,6 @@
       sendBtn.disabled = false;
     }
   }
-
   function openChat(focus) {
     panel.hidden = false;
     launcher.hidden = true;
@@ -463,7 +457,6 @@
       sendBtn.disabled = false;
     }
   }
-
   launcher.addEventListener("click", function () { openChat(true); });
   $("chat-close").addEventListener("click", closeChat);
   [].forEach.call(document.querySelectorAll("[data-open-chat]"), function (b) {
@@ -489,6 +482,7 @@
 
   refreshChrome();
 
+  /* Primeira visita: o assistente abre sozinho. Quem já voltou vê o nome no botão. */
   if (!profile) {
     setTimeout(function () { if (!started) openChat(false); }, 1200);
   }
